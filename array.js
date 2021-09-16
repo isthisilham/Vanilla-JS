@@ -2,39 +2,44 @@ let sourFruits = ["lime", "orange", "lemon"];
 
 console.log(sourFruits);
 
-let first = sourFruits[1]
+let first = sourFruits[1];
 
-console.log(first)
+console.log(first);
 
-let last = sourFruits[sourFruits.length -1]
+let last = sourFruits[sourFruits.length - 1];
 
-console.log(last)
+console.log(last);
 
-let newLength = sourFruits.push("starfruit")
+let newLength = sourFruits.push("starfruit");
 
-let removeEndItemLeght = sourFruits.pop()
+let removeEndItemLeght = sourFruits.pop();
 
-let removeFirstItemLeght = sourFruits.shift()
+let removeFirstItemLeght = sourFruits.shift();
 
-let newFirstLength = sourFruits.unshift("Strawberry")
+let newFirstLength = sourFruits.unshift("Strawberry");
 
-sourFruits.forEach(function(item, index, array){
-    console.log(item, index)
-})
+sourFruits.forEach(function (item, index, array) {
+  console.log(item, index);
+});
 
-console.log(sourFruits.indexOf("orange"))
+console.log(sourFruits.indexOf("orange"));
 
+let vegetables = ["spinach", "broccoli", "cauliflower", "carrot"];
+console.log(vegetables);
 
-let vegetables = ['spinach', 'broccoli', 'cauliflower', 'carrot']
-console.log(vegetables)
+// let pos = 1
+// let n = 2
 
+// let removedItems = vegetables.splice(pos, n)
 
-let pos = 1
-let n = 2
+// console.log(vegetables)
 
-let removedItems = vegetables.splice(pos, n)
+// console.log(removedItems)
 
-console.log(vegetables)
+console.log(
+  vegetables.reduce(function (acc, sayur, ke) {
+    acc[sayur] = `Sayur ke ${ke + 1}`;
 
-
-console.log(removedItems)
+    return acc;
+  }, {}) //["broccoli"]
+);
